@@ -1,0 +1,4 @@
+Открывать нужно весь проект, запускать plusVision.py
+если прогрма не запускаеться из-за отсутвия библиотек, введите в терминал проекта код ниже.
+
+pip install opencv-python numpy pyautogui pytesseract
