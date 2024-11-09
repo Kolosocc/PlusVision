@@ -35,7 +35,7 @@ else:
         for plus_image in plus_images:
             if gray_img.shape[0] >= plus_image.shape[0] and gray_img.shape[1] >= plus_image.shape[1]:
                 res = cv2.matchTemplate(gray_img, plus_image, cv2.TM_CCOEFF_NORMED)
-                threshold = 0.6
+                threshold = 0.8
                 loc = np.where(res >= threshold)
 
                 if loc[0].size > 0:
@@ -44,7 +44,7 @@ else:
 
                     for input_image in input_images:
                         res = cv2.matchTemplate(gray_img, input_image, cv2.TM_CCOEFF_NORMED)
-                        threshold = 0.8
+                        threshold = 0.6
                         loc = np.where(res >= threshold)
 
                         if loc[0].size > 0:
