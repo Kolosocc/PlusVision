@@ -44,7 +44,7 @@ else:
 
                     for input_image in input_images:
                         res = cv2.matchTemplate(gray_img, input_image, cv2.TM_CCOEFF_NORMED)
-                        threshold = 0.6
+                        threshold = 0.8
                         loc = np.where(res >= threshold)
 
                         if loc[0].size > 0:
